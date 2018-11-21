@@ -22,7 +22,7 @@ public class Main {
 
         Person person = context.getBean(Person.class);
 
-        logger.info("{}", person);
+        logger.error("{}", person);
 
     }
 }

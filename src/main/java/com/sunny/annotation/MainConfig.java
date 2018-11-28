@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class MainConfig {
     @Bean
-    @Scope("singleton")
+    @Scope("singletonc")
     public Person person() {
         System.out.println("-----person init----");
         return new Person("王五", 20);

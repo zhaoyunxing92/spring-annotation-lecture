@@ -6,6 +6,7 @@ package com.sunny.annotation;
 import com.sunny.xml.bean.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 /**
  * @author zhaoyunxing92
@@ -16,7 +17,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MainConfig {
     @Bean
+    @Scope("singleton")
     public Person person() {
+        System.out.println("-----person init----");
         return new Person("王五", 20);
     }
 }

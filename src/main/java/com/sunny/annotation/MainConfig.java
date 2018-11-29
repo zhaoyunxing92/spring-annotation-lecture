@@ -3,8 +3,11 @@
  */
 package com.sunny.annotation;
 
+import com.sunny.condition.LinuxConditional;
+import com.sunny.condition.WinConditional;
 import com.sunny.xml.bean.Person;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
@@ -16,10 +19,23 @@ import org.springframework.context.annotation.Scope;
  */
 @Configuration
 public class MainConfig {
-    @Bean
-    @Scope("singletonc")
+    @Bean("person")
     public Person person() {
         System.out.println("-----person init----");
         return new Person("王五", 20);
+    }
+
+    @Bean("bill")
+    @Conditional(WinConditional.class)
+    public Person person01() {
+
+        return new Person("WinConditional", 20);
+    }
+
+    @Bean("linux")
+    @Conditional(LinuxConditional.class)
+    public Person person02() {
+
+        return new Person("LinuxConditional", 30);
     }
 }

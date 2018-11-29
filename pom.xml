@@ -42,7 +42,7 @@
             <artifactId>jcl-over-slf4j</artifactId>
             <version>1.7.12</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <!-- https://mvnjunitrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

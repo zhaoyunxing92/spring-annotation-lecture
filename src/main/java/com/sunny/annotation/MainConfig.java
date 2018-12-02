@@ -3,13 +3,12 @@
  */
 package com.sunny.annotation;
 
+import com.sunny.bean.Blue;
 import com.sunny.condition.LinuxConditional;
 import com.sunny.condition.WinConditional;
+import com.sunny.importing.MyImportSelector;
 import com.sunny.xml.bean.Person;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 /**
  * @author zhaoyunxing92
@@ -18,6 +17,7 @@ import org.springframework.context.annotation.Scope;
  * @des:
  */
 @Configuration
+@Import({MyImportSelector.class, Blue.class})
 public class MainConfig {
     @Bean("person")
     public Person person() {

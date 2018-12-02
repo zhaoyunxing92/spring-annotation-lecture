@@ -18,6 +18,14 @@ public class IOCTest {
     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
 
     @Test
+    public void color() {
+        String[] beanDefinitionNames = context.getBeanDefinitionNames();
+        System.out.println("=======================");
+        Arrays.asList(beanDefinitionNames).forEach(System.out::println);
+    }
+
+
+    @Test
     public void person() {
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
         System.out.println("=======================");

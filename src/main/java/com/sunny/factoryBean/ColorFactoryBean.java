@@ -20,6 +20,7 @@ public class ColorFactoryBean implements FactoryBean<Color> {
      */
     @Override
     public Color getObject() throws Exception {
+        System.out.println("ColorFactoryBean getObject......");
         return new Color();
     }
 

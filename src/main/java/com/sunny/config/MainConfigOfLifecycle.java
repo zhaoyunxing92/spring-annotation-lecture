@@ -6,7 +6,6 @@ package com.sunny.config;
 import com.sunny.bean.Car;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 /**
@@ -18,8 +17,8 @@ import org.springframework.context.annotation.Scope;
  * 2. 通过InitializingBean和DisposableBean接口监听bean的生命周期
  * @see com.sunny.bean.Cat
  */
-@ComponentScan(basePackages = "com.sunny.bean")
-@Configuration
+@ComponentScan(basePackages = "com.sunny")
+//@Configuration
 public class MainConfigOfLifecycle {
     /**
      * 指定bean的 init 和 destroy方法

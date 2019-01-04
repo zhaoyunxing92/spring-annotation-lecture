@@ -19,6 +19,7 @@ public class MyImportSelector implements ImportSelector {
      * @param importingClassMetadata
      * @return
      */
+    @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
         return new String[]{"com.sunny.bean.Red", "com.sunny.bean.Blue"};
     }

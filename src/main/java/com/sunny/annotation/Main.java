@@ -6,7 +6,6 @@ package com.sunny.annotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Scope;
 
 import java.util.Arrays;
 
@@ -17,13 +16,13 @@ import java.util.Arrays;
  * @des:
  */
 public class Main {
-    private static final Logger logger = LoggerFactory.getLogger(com.sunny.xml.bean.Main.class);
+    private static  final Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
 
-        String[] beanDefinitionNames = context.getBeanDefinitionNames();
+        String[]  beanDefinitionNames = context.getBeanDefinitionNames();
         Arrays.asList(beanDefinitionNames).forEach(name -> logger.info("bean:{}", name));
 
         Object person = context.getBean("person");

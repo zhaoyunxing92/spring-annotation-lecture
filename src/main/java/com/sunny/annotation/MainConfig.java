@@ -25,7 +25,7 @@ public class MainConfig {
         return new Person("王五", 20);
     }
 
-    @Bean("bill")
+    @Bean("windows")
     @Conditional(WinConditional.class)
     public Person person01() {
 
